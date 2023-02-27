@@ -1,0 +1,27 @@
+A
+broad bean , 5 , 65 , tuberous vegetables , 1 , M&M Farms Inc.
+taro , 1 , 95 , tuberous vegetables , 1 , Get Fresh Distributors Inc
+
+B
+ginger , 2 , 2 , bulb , 0 , Galli Produce Inc
+
+C
+kale , 2 , 95 , bulb , 0 , Galli Produce Inc
+
+D
+borage , 5 , 72 , stem vegetables , 2 , Alliance Produce Distributors
+
+E
+artichoke , 4 , 77 , root , 1 , DLJ Produce Distributors
+cauliflower , 2 , 4 , root , 0 , Produce Services of Los Angeles
+squash , 1 , 53 , root , 0 , Galli Produce Inc
+
+F
+Brussels sprouts , 3 , 76 , leaf , 2 , Galli Produce Inc
+sweet potato , 5 , 28 , leaf , 1 , Westlake produce company
+watercress , 4 , 89 , leaf , 1 , The SF Market (San Francisco Wholesale Produce Market)
+cowpea , 3 , 98 , leaf , 0 , A and F Distributing Corp.
+taro , 4 , 63 , leaf , 0 , The SF Market (San Francisco Wholesale Produce Market)
+taro , 5 , 58 , leaf , 0 , Reyes Wholesale Produce
+fennel , 4 , 3 , leaf , 0 , West Central Produce
+

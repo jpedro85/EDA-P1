@@ -1,0 +1,15 @@
+asparagus,fruit,M&M Farms Inc.,98,0,3
+chard,fruit,Galli Produce Inc,30,0,3
+cauliflower,fruit,M&M Farms Inc.,26,0,4
+eggplant,fruit,DLJ Produce Distributors,20,0,1
+spinach,stem vegetables,Ensenada Produce Distributors,67,0,5
+lotus,stem vegetables,Primo Growers And Distributors,28,0,5
+lambs quarters,seed vegetables,DLJ Produce Distributors,100,0,2
+pepper,seed vegetables,LA Produce Distributors,60,0,3
+kale,bud vegetables,Produce Services of Los Angeles,1,0,3
+salsify,bud vegetables,A and F Distributing Corp.,58,0,1
+carrot,bud vegetables,Westlake produce company,92,0,5
+broad bean,bud vegetables,LA Produce Distributors,92,0,5
+Indian fig,bud vegetables,Field Fresh Distributors,73,0,5
+musk cucumber,bud vegetables,LA Produce Distributors,64,0,3
+lima bean,bud vegetables,LA Produce Distributors,31,0,1

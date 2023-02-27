@@ -1,0 +1,512 @@
+
+	string* str_ary = new string[10];
+
+	for (int i = 0; i < 10; i++)
+	{
+		str_ary[i] = "boi" + to_string(i);
+	}
+
+	int t = 10;
+	for (int i = 8; i < 10; i++)
+	{
+		t = inserir(str_ary, i, "vaca" + to_string(i), t);
+		cout << t << endl;
+	}
+
+	
+	t = remover(str_ary, 8, t);
+	t = remover(str_ary, 0, t);
+	t = remover(str_ary, t-1, t);
+	escrever(str_ary, t);
+
+	t = strip(str_ary, "boi1", t);
+
+	escrever(str_ary, t);
+	
+	//int t1 = 0, t2 = 0;
+	//string* a, *b;
+
+	//split(str_ary, 3, t, &a, &t1, &b, &t2);
+
+	//escrever(a, t1);
+	//cout << "a";
+	//escrever(b, t2);
+
+	//cout << procurar(str_ary, "boi4", t);
+	////escrever(str_ary, t);
+
+
+	/// main
+
+	/*configurar rand
+	 cliclo =0;
+	carregar produtos , areas , fornecedores para os respedtivos arrays string
+	crkiar a plantação
+	 começar a simular {
+		
+		
+		1-colheita
+		2-rega
+		3-criar 10 produtos colocar no Fila_Armazem
+		4-remover outros 10 e plantar;
+		5-pragas
+
+		6- para cada orta 
+			-para cada produto :
+			1 - verificar a rega(se é o ultimo dia ou não)
+			2 - verificar campanha
+			3 - calcular a prob.De estragar
+			4 - aumentar o numero de dias plantado;
+
+			imprimir as horas;
+			imprimir o armazem;
+
+			"esperar por imput"
+
+		7-cicli++;
+	}*/
+
+	/*
+	Fila_Armazem test;
+
+	Produto a_teste;
+	a_teste.area = "Bois";
+	a_teste.fornecedor = "Favas1";
+	a_teste.nome = "Vaca";
+
+	Produto b_teste;
+	b_teste.area = "Bois";
+	b_teste.fornecedor = "Favas2";
+	b_teste.nome = "Vaca";
+
+	adicionar(test, a_teste);
+
+//	adicionar(test, b_teste);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	adicionar(test, b_teste);
+	
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	b_teste.area = "Bois1";
+	b_teste.fornecedor = "Favas3";
+	b_teste.nome = "Vaca";
+
+	adicionar(test, b_teste);
+	
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	b_teste.fornecedor = "Favas4";
+
+	adicionar(test, b_teste);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	b_teste.area = "Bois2";
+	b_teste.fornecedor = "Favas5";
+	b_teste.nome = "Vaca1";
+
+	adicionar(test, b_teste);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	b_teste.area = "Bois3";
+	b_teste.fornecedor = "Favas6";
+	b_teste.nome = "Vaca3";
+
+	adicionar(test, b_teste);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	b_teste.fornecedor = "Favas7";
+	b_teste.nome = "Vaca6";
+
+	adicionar(test, b_teste);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	Produto* a;
+	for (int i = 0; i < 7; i++)
+	{
+		a = get_Produto(test,i);
+		//cout << a;
+		cout << a->fornecedor << "|" << i << endl;
+
+	}
+
+	remover(test);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	remover(test,1);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	remover(test);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+
+	b_teste.area = "teste3";
+	b_teste.fornecedor = "Favas8";
+	b_teste.nome = "N1";
+
+	adicionar(test, b_teste);
+
+	b_teste.area = "teste3";
+	b_teste.fornecedor = "Favas9";
+	b_teste.nome = "N2";
+
+	adicionar(test, b_teste);
+	b_teste.area = "teste3";
+	b_teste.fornecedor = "Favas10";
+	b_teste.nome = "N3";
+
+	adicionar(test, b_teste);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+
+	cout << get_Produto(test, 4)->fornecedor;
+	remover(test,4);
+
+	lerarmazem(test);
+	cout << "--------------------" << endl;
+	
+	
+	
+	*/
+
+	adicionar antigo ----------------------------------
+	void adicionar2(Fila_Armazem& fila, Produto produto) {
+
+	bool modificado = false;
+	if (fila.len_armazem == 0) {
+
+		Fila_Armazem::Fila_Armario::Fila_Prateleira nova_prateleira;
+		nova_prateleira.nome = produto.nome;
+		nova_prateleira.ary_prateleira = new Produto[1];
+		nova_prateleira.len_prateleira = 1;
+		nova_prateleira.ary_prateleira[0] = produto; //adiciona o novo produto á prateleira
+
+		Fila_Armazem::Fila_Armario novo_armario;
+		novo_armario.area = produto.area;
+		novo_armario.ary_armario = new Fila_Armazem::Fila_Armario::Fila_Prateleira[1];
+		novo_armario.len_armario = 1;
+		novo_armario.ary_armario[0] = nova_prateleira; //adiciona a prateleira ao armário
+
+		//cria um auxiliar para o array de armarios "armazem"
+		fila.ary_armazem = new Fila_Armazem::Fila_Armario[1];
+		fila.ary_armazem[0] = novo_armario; // adiciona o novo armario ao armazem;
+
+		fila.len_armazem++;//atualiza o tamanho	
+		fila.n_produtos++; //atualiza o tamanho do armazem no total
+
+	}
+	else {
+
+		// percurre todos os armarios e vê se tem um da area do produto
+		for (int i_armario = 0; i_armario < fila.len_armazem; i_armario++)
+		{
+
+			//percorre todas as prateleiras e vê sejá existe uma com o nome do produto
+			if (modificado)break;
+			if (produto.area == fila.ary_armazem[i_armario].area) //se tiver uma area do produto
+			{
+
+				for (int i_prateleira = 0; i_prateleira < fila.ary_armazem[i_armario].len_armario; i_prateleira++)
+				{
+					//se tiver
+					if (modificado)break;
+					if (produto.nome == fila.ary_armazem[i_armario].ary_armario[i_prateleira].nome) {
+
+						//cria um auxiliar maior em 1 do que a prateleira
+						Produto* aux = new Produto[fila.ary_armazem[i_armario].ary_armario[i_prateleira].len_prateleira + 1];
+						//copia os produtos para o aux
+						for (int i_produto = 0; i_produto < fila.ary_armazem[i_armario].ary_armario[i_prateleira].len_prateleira; i_produto++)
+						{
+							aux[i_produto] = fila.ary_armazem[i_armario].ary_armario[i_prateleira].ary_prateleira[i_produto];
+						}
+						//adiciona o novo no ultimo lugar
+						aux[fila.ary_armazem[i_armario].ary_armario[i_prateleira].len_prateleira] = produto;
+
+						delete[] fila.ary_armazem[i_armario].ary_armario[i_prateleira].ary_prateleira;//limpa o antigo
+						fila.ary_armazem[i_armario].ary_armario[i_prateleira].ary_prateleira = aux;//atualiza o apontador para o novo
+						fila.ary_armazem[i_armario].ary_armario[i_prateleira].len_prateleira++;//atualiza o tamanho do array
+						fila.n_produtos++; //atualiza o tamanho do armazem no total
+						modificado = true;
+
+					}
+					else if (i_prateleira + 1 == fila.ary_armazem[i_armario].ary_armario[i_prateleira].len_prateleira) {
+						//se não tiver nenhuma prateleira com o nome do produto
+
+						//cria uma com 1 lugar
+						Fila_Armazem::Fila_Armario::Fila_Prateleira nova_prateleira;
+						nova_prateleira.nome = produto.nome;
+						nova_prateleira.ary_prateleira = new Produto[1];
+						nova_prateleira.len_prateleira = 1;
+						nova_prateleira.ary_prateleira[0] = produto;
+
+						//cria um auxiliar para o armario
+						Fila_Armazem::Fila_Armario::Fila_Prateleira* armario_auxiliar = new Fila_Armazem::Fila_Armario::Fila_Prateleira[fila.ary_armazem[i_armario].len_armario + 1];
+
+						//copia as pratelairas para o auxiliar
+						for (int i = 0; i < fila.ary_armazem[i_armario].len_armario; i++)
+						{
+							armario_auxiliar[i] = fila.ary_armazem[i_armario].ary_armario[i];
+						}
+						//adiciona a nova
+						armario_auxiliar[fila.ary_armazem[i_armario].len_armario] = nova_prateleira;
+
+						delete[] fila.ary_armazem[i_armario].ary_armario;//limpa o antigo
+						fila.ary_armazem[i_armario].ary_armario = armario_auxiliar;//atualiza o apontador para o novo
+						fila.ary_armazem[i_armario].len_armario++;//atualiza o tamanho
+						fila.n_produtos++; //atualiza o tamanho do armazem no total
+						modificado = true;
+					}
+				}
+			}else if (i_armario + 1 == fila.len_armazem) {
+
+				//quando não existe aquela area no armazem
+
+				//cira um novo armario para aquela area com 1 lugar
+				Fila_Armazem::Fila_Armario novo_armario;
+				novo_armario.area = produto.area;
+				novo_armario.ary_armario = new Fila_Armazem::Fila_Armario::Fila_Prateleira[1];
+				novo_armario.len_armario = 1;
+
+				//cria uma nova prateleira para o armario com 1 lugar
+				Fila_Armazem::Fila_Armario::Fila_Prateleira nova_prateleira;
+				nova_prateleira.nome = produto.nome;
+				nova_prateleira.ary_prateleira = new Produto[1];
+				nova_prateleira.len_prateleira = 1;
+
+				nova_prateleira.ary_prateleira[0] = produto; //adiciona o novo produto á prateleira
+				novo_armario.ary_armario[0] = nova_prateleira; //adiciona a prateleira ao armário
+
+				//cria um auxiliar para o array de armarios "armazem"
+				Fila_Armazem::Fila_Armario* aux = new Fila_Armazem::Fila_Armario[fila.len_armazem + 1];
+				//copia todos os armarios para o auxiliar
+				for (int i = 0; i < fila.len_armazem; i++)
+				{
+					aux[i] = fila.ary_armazem[i];
+				}
+				//adiciona o novo
+				aux[fila.len_armazem] = novo_armario; // adiciona o novo armario ao armazem;
+
+				delete[] fila.ary_armazem;// liberta o espaço do armazem antigo
+				fila.ary_armazem = aux;// atualiza o armazem
+				fila.len_armazem++;//atualiza o tamanho	
+				fila.n_produtos++; //atualiza o tamanho do armazem no total
+
+				modificado = true;
+			}
+		}
+	}
+}
+-------------------------------------
+
+string areas[5] = { "A1","A2","A3","A4", "A6" };
+	string fornecedores[5] = { "F1","F2","F3","F4", "F6" };
+	string Nomes[6] = { "N1","N2","N3","N4", "N6","N7"};
+	
+
+	Fila_Armazem test;
+	Produto a_teste;
+	int n = 15;
+
+	inicializar_armazem(test, n, Nomes, fornecedores, areas, 6, 5, 5);
+	verificar(test);
+	Produto* a;
+
+	for (int i = 0; i < 20; i++)
+	{
+		a = get_Produto(test,i);
+		cout << a->fornecedor << endl;
+	}
+	
+	esrcrever_armazem(test);
+	cout << "------------------------------------------------------------" << endl;
+
+	
+
+	cout << len(test) << test.n_produtos<< endl;
+
+	for (int i = 0; i < 9; i++)
+	{
+		a = get_Produto(test,i);
+		cout << a->fornecedor << endl;
+		remover(test,i);
+		esrcrever_armazem(test);
+		cout << "-----------" << test.n_produtos << endl;;
+
+
+	}
+	esrcrever_armazem(test);
+	cout << "------------------------------------------------------------" << endl;
+
+--------------------------------------------------------
+inicializar_armazem(armazem, 10, Nomes, fornecedores, areas, 6, 5, 5);
+
+	guardar("armazem.txt", armazem);
+
+	esrcrever_armazem(armazem);
+	cout << "------------------------";
+
+	Fila_Armazem carregado;
+
+	carregar("armazem.txt", carregado);
+
+	esrcrever_armazem(carregado);
+
+
+	guardar("armazem.txt", armazem);
+
+	escrever_armazem(armazem);
+	cout << "------------------------"<<endl;
+
+	Fila_Armazem carregado;
+
+	carregar("armazem.txt", carregado);
+
+	escrever_armazem(carregado);
+
+	cout << "-----------------" << endl;
+
+	//limpar(carregado);
+
+	//cout << carregado.n_produtos << endl;
+
+	//for (int i = 0; i < 7; i+=2)
+	//{
+	//	cout << get_Produto(carregado, i)->fornecedor ;
+	//	remover(carregado, i);
+	//	escrever_armazem(carregado);
+	//	std::cout << "-------------------" << endl;
+	//}
+
+	//roduto* n = Armazem_To_ProdutoArray(carregado);
+
+	//escrever(n,carregado.n_produtos);
+
+	//ordenar_tempo_plantacao(n, carregado.n_produtos);
+	//cout << "--------------" << endl;
+
+	//ordenar_area(n, carregado.n_produtos);
+	//cout << "--------------" << endl;
+
+	//escrever(n, carregado.n_produtos);
+	//cout << "--------------" << endl;
+	
+	int po;
+	for (int i = 0; i < carregado.len_armazem; i++)
+	{
+		//cout << get_ProdutoOfArmario(carregado, i, po)->fornecedor << endl;
+		remover(carregado, i);
+		//escrever_armazem(carregado);
+		
+	}
+
+	escrever_armazem(carregado);
+	cout << "--------------" << endl;
+----------------------------------------
+ {
+
+	srand(time(NULL));
+	for (int i = 0; i < quantidade; i++) {
+		
+		//adicionar(armazem, *criar_PProduto(nomes, fornecedores, areas, tamanho_nomes, tamanho_fornecedores, tamanho_areas));
+
+	}
+	return quantidade;
+}
+------------------------------------------
+
+Produto* criar_PProduto(std::string nomes[], std::string fornecedores[], std::string areas[], int tamanho_nomes, int tamanho_fornecedores, int tamanho_areas,int i) {
+
+	int indice_Produtos = rand() % (tamanho_nomes);
+	int indice_fornecedores = rand() % (tamanho_fornecedores);
+	int indice_areas = rand() % (tamanho_areas);
+	Produto* p = new Produto;
+	p->nome = nomes[indice_Produtos];
+	p->area = areas[indice_areas];
+	p->fornecedor = "F" + to_string(i);
+	p->tempo_plantação = rand() % 10;
+	return p;
+
+
+	---------------------------------------------------
+
+	
+	for (int i = 0; i < 100; i++)
+	{
+		adicionar(armazem,criar_Produto(Nomes, fornecedores, areas, 6, 5, 5));
+	}
+
+	
+	horta plantacao[5];
+
+	for (int i = 0; i < 5; i++)
+	{
+		plantacao[i] = criar_horta(areas, 5, 'a');
+	}
+
+	escrever_plantacao(plantacao, 5);
+
+	escrever_armazem(armazem);
+
+	/*for (int i = 0; i < 5; i++)
+	{
+		cout << &plantacao[i] << ":horta" << endl;
+
+
+		for (int i = 0; i < plantacao[i].capacidade; i++)
+		{
+			cout << &plantacao[i].ary_plantados << ":ary" << endl;
+		}
+	}*/
+	adicionar_produtos_horta(armazem, plantacao, 5);
+
+
+	//escrever_plantacao(plantacao, 5);
+
+
+	
+	
+	horta a;
+	a.capacidade = 10;
+	a.ary_plantados = new Produto[10];
+
+	for (int i = 0; i < 10; i++)
+	{
+		a.ary_plantados[i] = criar_Produto(Nomes, fornecedores, areas, 6, 5, 5);
+
+	}
+	a.n_plantados = 10;
+	
+	escrever(a.ary_plantados, 10);
+
+	string n = "";
+	cin >> n;
+
+	remover_da_horta_colheita(a, n);
+
+	cout << a.n_colhidos << endl;
+
+	escrever(a.ary_colhidos, a.n_colhidos);
+
+	cout << endl << "-----" << endl;
+
+	escrever(a.ary_plantados, 10);
+	

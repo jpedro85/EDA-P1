@@ -1,0 +1,40 @@
+A ,  , 7 , tuberous vegetables , 7 , 2 , 0 , 0
+sorrel , 4 , 9 , tuberous vegetables , 1 , West Central Produce
+celery , 4 , 24 , tuberous vegetables , 1 , Westlake produce company
+turnip , 1 , 90 , tuberous vegetables , 3 , Westlake produce company
+tomato , 5 , 95 , tuberous vegetables , 3 , Mountain Produce
+chickpea , 4 , 25 , tuberous vegetables , 3 , Alliance Produce Distributors
+shallot , 4 , 43 , tuberous vegetables , 3 , DLJ Produce Distributors
+rutabaga , 5 , 42 , tuberous vegetables , 3 , Field Fresh Distributors
+
+B ,  , 5 , bulb , 4 , 1 , 0 , 0
+gherkin , 2 , 54 , bulb , 0 , Galli Produce Inc
+pepper , 2 , 72 , bulb , 2 , S and L Wholesale Produce
+moringa , 5 , 60 , bulb , 2 , Ensenada Produce Distributors
+collard , 3 , 60 , bulb , 2 , Ensenada Produce Distributors
+
+C ,  , 8 , bulb , 1 , 1 , 0 , 0
+bamboo , 3 , 26 , bulb , 2 , West Central Produce
+
+D ,  , 6 , stem vegetables , 5 , 1 , 0 , 0
+amaranth , 4 , 56 , stem vegetables , 0 , The SF Market (San Francisco Wholesale Produce Market)
+endive , 4 , 28 , stem vegetables , 0 , S and L Wholesale Produce
+water chestnut , 2 , 53 , stem vegetables , 0 , Nacho's Wholesale Produce
+artichoke , 2 , 81 , stem vegetables , 0 , Mountain Produce
+Napa cabbage , 3 , 27 , stem vegetables , 4 , California Green Distributor, Inc
+
+E ,  , 8 , root , 4 , 3 , 0 , 0
+borage , 3 , 70 , root , 0 , West Central Produce
+parsnip , 4 , 16 , root , 1 , M&M Farms Inc.
+broccoli , 5 , 96 , root , 1 , California Green Distributor Inc
+burdock , 5 , 50 , root , 2 , Alliance Produce Distributors
+
+F ,  , 7 , leaf , 7 , 7 , 0 , 0
+kale , 2 , 31 , leaf , 0 , Produce Services of Los Angeles
+amaranth , 2 , 24 , leaf , 0 , Westlake produce company
+lentil , 1 , 95 , leaf , 0 , A and F Distributing Corp.
+pumpkin , 2 , 99 , leaf , 0 , S and L Wholesale Produce
+salsify , 4 , 7 , leaf , 1 , DLJ Produce Distributors
+celeriac , 5 , 63 , leaf , 1 , Primo Growers And Distributors
+moringa , 5 , 92 , leaf , 4 , Galli Produce Inc
+

@@ -1,0 +1,15 @@
+pea,tuberous vegetables,DLJ Produce Distributors,38,0,3
+chickpea,tuberous vegetables,California Green Distributor Inc,46,0,5
+watercress,tuberous vegetables,West Central Produce,45,0,1
+watercress,tuberous vegetables,Primo Growers And Distributors,59,0,4
+ginger,tuberous vegetables,Mountain Produce,9,0,5
+Brussels sprouts,tuberous vegetables,Primo Growers And Distributors,77,0,5
+snake gourd,tuberous vegetables,A and F Distributing Corp.,23,0,5
+leek,tuberous vegetables,Alliance Produce Distributors,10,0,2
+celeriac,tuberous vegetables,West Central Produce,57,0,3
+lambs quarters,tuberous vegetables,Produce Services of Los Angeles,16,0,5
+bamboo,tuberous vegetables,West Central Produce,93,0,5
+chayote,leaf,Produce Services of Los Angeles,67,0,2
+chicory,leaf,Produce Services of Los Angeles,53,0,2
+borage,root,Field Fresh Distributors,48,0,2
+chicory,root,The SF Market (San Francisco Wholesale Produce Market),25,0,2
